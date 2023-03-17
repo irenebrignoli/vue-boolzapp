@@ -62,10 +62,9 @@
            </div>
 
            <!-- contacts -->
-          <div id="contacts" class="d-flex">
-            <div class="contact w-100">
+          <div id="contacts" class="overflow-y">
 
-              <div v-for="contact in contacts" class="avatar d-flex">
+              <div v-for="contact in contacts" class="avatar d-flex w-100">
                 <div class="h-100 d-flex">
                   <img :src="contact.avatar" :alt="contact.name">
                 <div class="info">
@@ -76,12 +75,10 @@
                 <div class="time">12:00</div>
               </div>
 
-            </div>
-
-            <div class="scroll-bar">
+            <!-- <div class="scroll-bar">
               <i class="fa-solid fa-caret-up"></i>
               <i class="fa-solid fa-caret-down"></i>
-            </div>
+            </div> -->
           </div>
 
         </aside>
