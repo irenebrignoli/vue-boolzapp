@@ -3,3 +3,63 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root{
+  --primary: #009688;
+  --background: #dadbd3;
+  --chat-sent: #d5f9ba;
+  --white: #fff;
+  --black: #000;
+  --headers: #eaeaea;
+  --medium-gray: #b1b1b1;
+  --dark-gray: #6b7172;
+  --scroll-bar: #f1f1f1;
+  --selected-contact: #e9ebeb;
+  --chat-bar: #f3eeea;
+}
+
+body{
+  background-color: var(--background);
+}
+
+#green-header{
+  background-color: var(--primary);
+  height: 8.75rem;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+.container{
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  top: -7rem;
+  height: 35rem;
+  background-color: var(--white);
+}
+
+.aside-content{
+  width: 35%;
+  border-right: 1px solid var(--medium-gray);
+}
+
+.main-content{
+  width: 65%;
+}
+
+.section-header{
+  height: 4rem;
+  background-color: var(--headers);
+  display: flex;
+  padding: 0.3rem;
+}
+
+#my-account{
+ 
+}
