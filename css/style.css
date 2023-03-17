@@ -95,6 +95,12 @@ img{
   vertical-align: middle;
 }
 
+.time{
+  font-size: 0.7rem;
+  color: var(--medium-gray);
+  text-align: right;
+}
+
 .icons{
   color: var(--medium-gray);
   gap: 1rem;
@@ -201,11 +207,6 @@ img{
   color: var(--medium-gray);
 }
 
-#contacts .time{
-  font-size: 0.7rem;
-  color: var(--medium-gray);
-}
-
 /* main content */
 
 #main-content{
@@ -219,6 +220,34 @@ img{
 .chat-area{
   width: 100%;
   background-image: url("../img/mine.jpg");
+}
+
+.mex-container{
+  width: 80%;
+  margin: 3rem auto;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mex{
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.6rem;
+  border-radius: 0.7rem;
+  width: 17rem;
+}
+
+.mex.sent{
+  background-color: var(--chat-sent);
+  align-self: flex-end;
+}
+
+.mex.received{
+  background-color: var(--white);
+}
+
+.mex .time{
+  font-size: 0.6rem;
 }
 
 .chat-bar{
@@ -242,8 +271,8 @@ img{
 
 .chat-bar .bar input{
   height: 100%;
+  padding-left: 1rem;
 }
-
 
 
 
