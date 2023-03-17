@@ -1,12 +1,3 @@
-/*
-Milestone 1
-● Replica della grafica con la possibilità di avere messaggi scritti dall’utente (verdi) e
-dall’interlocutore (bianco) assegnando due classi CSS diverse
-● Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare
-nome e immagine di ogni contatto
-*/
-
-
 
 const { createApp } = Vue
 
@@ -16,7 +7,7 @@ const { createApp } = Vue
         contacts: [
           {
             name: 'Michele',
-            avatar: './img/avatar_1.png',
+            avatar: './img/avatar_1.jpg',
             visible: true,
             messages: [
               {
@@ -38,7 +29,7 @@ const { createApp } = Vue
           },
           {
             name: 'Fabio',
-            avatar: './img/avatar_2.png',
+            avatar: './img/avatar_2.jpg',
             visible: true,
             messages: [
               {
@@ -60,7 +51,7 @@ const { createApp } = Vue
           },
           {
             name: 'Samuele',
-            avatar: './img/avatar_3.png',
+            avatar: './img/avatar_3.jpg',
             visible: true,
             messages: [
               {
@@ -82,7 +73,7 @@ const { createApp } = Vue
           },
           {
             name: 'Alessandro B.',
-            avatar: './img/avatar_4.png',
+            avatar: './img/avatar_4.jpg',
             visible: true,
             messages: [
               {
@@ -99,7 +90,7 @@ const { createApp } = Vue
           },
           {
             name: 'Alessandro L.',
-            avatar: './img/avatar_5.png',
+            avatar: './img/avatar_5.jpg',
             visible: true,
             messages: [
               {
@@ -116,7 +107,7 @@ const { createApp } = Vue
           },
           {
             name: 'Claudia',
-            avatar: './img/avatar_5.png',
+            avatar: './img/avatar_5.jpg',
             visible: true,
             messages: [
               {
@@ -138,7 +129,7 @@ const { createApp } = Vue
           },
           {
             name: 'Federico',
-            avatar: './img/avatar_7.png',
+            avatar: './img/avatar_7.jpg',
             visible: true,
             messages: [
               {
@@ -155,7 +146,7 @@ const { createApp } = Vue
           },
           {
             name: 'Davide',
-            avatar: './img/avatar_8.png',
+            avatar: './img/avatar_8.jpg',
             visible: true,
             messages: [
               {
@@ -179,3 +170,14 @@ const { createApp } = Vue
       }
     }
   }).mount('#app')
+
+
+  /*
+Milestone 1
+● Replica della grafica con la possibilità di avere messaggi scritti dall’utente (verdi) e
+dall’interlocutore (bianco) assegnando due classi CSS diverse
+● Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare
+nome e immagine di ogni contatto
+*/
+
+
