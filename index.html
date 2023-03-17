@@ -5,6 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- open sans font -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <!-- font awsome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -22,22 +25,108 @@
     <main class="container d-flex">
 
         <!-- aside -->
-        <aside class="aside-content">
-          <header id="my-account" class="section-header">
-            <img src="img/avatar_io.jpg" alt="my image">
+        <aside id="aside-content" class="h-100">
+
+          <!-- aside header-->
+          <header class="section-header">
+            <div class="avatar">
+              <img src="img/avatar_io.jpg" alt="my image">
+              <span class="info">Irene</span>
+            </div>
             <div class="icons d-flex">
               <i class="fa-solid fa-circle-notch"></i>
               <i class="fa-solid fa-message"></i>
               <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
           </header>
-          <section id="contacts"></section>
+
+          <!-- aside main-->
+
+          <!-- notice -->
+          <div class="notice d-flex align-center">
+            <div class="bell">
+              <i class="fa-solid fa-bell-slash"></i>
+            </div>
+            <div class="info">
+              <div class="notice-advice">Ricevi notifiche di nuovi messaggi</div>
+              <div class="notice-settings">Attiva notifiche desktop</div>
+            </div>
+          </div>
+
+           <!-- search -->
+           <div class="search">
+              <div class="bar d-flex">
+                <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <input type="text" placeholder="Cerca o inizia una nuova chat">
+              </div>
+           </div>
+
+           <!-- contacts -->
+          <div id="contacts" class="d-flex">
+            <div class="contact w-100">
+
+              <div class="avatar d-flex">
+                <div class="h-100 d-flex">
+                  <img src="img/avatar_1.jpg" alt="avatar_1">
+                <div class="info">
+                  <span class="name">Michele</span>
+                  <div class="access">Ultimo messaggio inviato</div>
+                </div>
+                </div>
+                <div class="time">12:00</div>
+              </div>
+
+            </div>
+
+            <div class="scroll-bar">
+              <i class="fa-solid fa-caret-up"></i>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+          </div>
+
         </aside>
 
+
+
         <!-- main content -->
-        <div class="main-content">
-          <header id="chat-header" class="section-header"></header>
-          <section id="chat"></section>
+        <div id="main-content" class="h-100">
+
+          <!-- chat header -->
+          <header class="section-header">
+            <div class="avatar d-flex align-center">
+              <img src="img/avatar_1.jpg" alt="avatar_1">
+              <div class="info">
+                <span class="name">Michele</span>
+                <div class="access">Ultimo accesso oggi alle 12:00</div>
+              </div>
+            </div>
+            <div class="icons d-flex">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-paperclip"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+          </header>
+
+          <!-- chat area-->
+          <div id="chat" class="d-flex">
+            <div class="chat-area"></div>
+            <div class="scroll-bar">
+              <i class="fa-solid fa-caret-up"></i>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+          </div>
+
+          <!-- chat bar -->
+          <div class="chat-bar d-flex">
+            <i class="fa-regular fa-face-smile"></i>
+            <div class="bar">
+              <input type="text" placeholder="Cerca o inizia una nuova chat">
+            </div>
+            <i class="fa-solid fa-microphone"></i>
+          </div>
+
+        
+          
         </div>
       
     </main>
