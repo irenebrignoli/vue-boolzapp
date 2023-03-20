@@ -105,7 +105,7 @@
           <!-- chat area-->
           <div id="chat" class="d-flex">
 
-            <div class="chat-area">
+            <div class="chat-area overflow-y">
               
               <div class="mex-container d-flex">
                 <div v-for="mex in contacts[activeContact].messages" class="mex" :class="mex.status == 'sent'?'sent':'received'">
@@ -116,17 +116,17 @@
               
             </div>
 
-            <div class="scroll-bar">
+            <!-- <div class="scroll-bar">
               <i class="fa-solid fa-caret-up"></i>
               <i class="fa-solid fa-caret-down"></i>
-            </div>
+            </div> -->
           </div>
 
           <!-- chat bar -->
           <div class="chat-bar d-flex">
             <i class="fa-regular fa-face-smile"></i>
             <div class="bar">
-              <input type="text" placeholder="Scrivi un messaggio">
+              <input v-model="inputFilled" @keyup.enter="sendMessage" type="text" placeholder="Scrivi un messaggio">
             </div>
             <i class="fa-solid fa-microphone"></i>
           </div>
