@@ -195,36 +195,18 @@ const { createApp } = Vue
         this.contacts[this.activeContact].messages.push(newMexReceived);
       },
       searchContact(){
-        const searchArray = this.newSearch.split('');
-        console.log(searchArray );
-       
         this.contacts.forEach(element => {
-          const arrayName = element.name.split('');
-          console.log(arrayName);
-
-          if(arrayName.includes(...searchArray)){
+          const lowerName = element.name.toLowerCase();
+          if(lowerName.includes(this.newSearch)){
             element.visible = true;
             }else{
             element.visible = false;
             }
         });
-
-
-
-
-
-        // const arrayName = this.contacts[0].name.split('');
-        // console.log(arrayName);
-
-        // for(let i = 0; i < this.newSearch.length; i++) {
-        // console.log(this.newSearch[i]);
-        //   if(arrayName.includes(i)){
-        //     contacts[0].visible = true;
-        //   }else{
-        //     contacts[0].visible = false;
-        //   }
-        // };
-        //this.newSearch = '';
+        setTimeout(this.resetSearch,4000);
+      },
+      resetSearch(){
+        this.newSearch = '';
       }
     }
   }).mount('#app')

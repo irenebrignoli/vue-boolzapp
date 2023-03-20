@@ -89,9 +89,9 @@
           <!-- chat header -->
           <header class="section-header">
             <div class="avatar d-flex align-center">
-              <img src="img/avatar_1.jpg" alt="avatar_1">
+              <img :src="contacts[activeContact].avatar" alt="contacts[activeContact].name">
               <div class="info">
-                <span class="name">Michele</span>
+                <span class="name">{{contacts[activeContact].name}}</span>
                 <div class="access">Ultimo accesso oggi alle 12:00</div>
               </div>
             </div>
