@@ -183,6 +183,15 @@ const { createApp } = Vue
         }
         this.contacts[this.activeContact].messages.push(newMessage);
         this.inputFilled = '';
+        setTimeout(this.receiveMessage,1000);
+      },
+      receiveMessage(){
+        const newMexReceived = {
+          date: '10/01/2020 15:51:00',
+          message: 'ok',
+          status: 'received'
+        }
+        this.contacts[this.activeContact].messages.push(newMexReceived);
       }
     }
   }).mount('#app')
