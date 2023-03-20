@@ -179,6 +179,10 @@ img{
   width: 100%;
 }
 
+.d-none{
+  display: none;
+}
+
 #contacts{
   height: calc(100% - 12rem);
 }

@@ -168,7 +168,8 @@ const { createApp } = Vue
           }
         ],
         activeContact: 0,
-        inputFilled: ''
+        newMex: '',
+        newSearch: ''
       }
     },
     methods: {
@@ -178,11 +179,11 @@ const { createApp } = Vue
       sendMessage(){
         const newMessage = {
           date: '10/01/2020 15:51:00',
-          message: this.inputFilled,
+          message: this.newMex,
           status: 'sent'
         }
         this.contacts[this.activeContact].messages.push(newMessage);
-        this.inputFilled = '';
+        this.newMex = '';
         setTimeout(this.receiveMessage,1000);
       },
       receiveMessage(){
@@ -192,6 +193,38 @@ const { createApp } = Vue
           status: 'received'
         }
         this.contacts[this.activeContact].messages.push(newMexReceived);
+      },
+      searchContact(){
+        const searchArray = this.newSearch.split('');
+        console.log(searchArray );
+       
+        this.contacts.forEach(element => {
+          const arrayName = element.name.split('');
+          console.log(arrayName);
+
+          if(arrayName.includes(...searchArray)){
+            element.visible = true;
+            }else{
+            element.visible = false;
+            }
+        });
+
+
+
+
+
+        // const arrayName = this.contacts[0].name.split('');
+        // console.log(arrayName);
+
+        // for(let i = 0; i < this.newSearch.length; i++) {
+        // console.log(this.newSearch[i]);
+        //   if(arrayName.includes(i)){
+        //     contacts[0].visible = true;
+        //   }else{
+        //     contacts[0].visible = false;
+        //   }
+        // };
+        //this.newSearch = '';
       }
     }
   }).mount('#app')
