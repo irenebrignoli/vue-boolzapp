@@ -15,21 +15,16 @@
   --medium-gray: #b1b1b1;
   --dark-gray: #6b7172;
   --scroll-bar: #f1f1f1;
-  --selected-contact: #e9ebeb;
+  --selected-contact: #eaeaea;
   --chat-bar: #f3eeea;
   --search-bg: #fafafa;
 }
 
-/* general */
+/* GENERAL */
 
 body{
-  background-color: var(--background);
+  background:linear-gradient(to bottom, #009688 20%, #dadbd3 20% 100%);
   font-family: 'Open Sans', sans-serif;
-}
-
-#green-header{
-  background-color: var(--primary);
-  height: 8.75rem;
 }
 
 .d-flex{
@@ -58,10 +53,8 @@ body{
 
 .container{
   max-width: 1200px;
-  margin: auto;
-  position: relative;
-  top: -7rem;
-  height: 40rem;
+  margin: 5vh auto;
+  height: 90vh;
   background-color: var(--white);
 }
 
@@ -123,7 +116,7 @@ img{
 }
 
 
-/* aside */
+/* ASIDE */
 
 #aside-content{
   width: 35%;
@@ -190,17 +183,21 @@ img{
   height: calc(100% - 12rem);
 }
 
-#contacts .contact{
-  border: 1px solid var(--selected-contact);
-  border-left: none;
-  border-right: none;
-  height: 5rem;
-}
-
 #contacts .avatar{
   height: 5rem;
   padding: 0.8rem;
   justify-content: space-between;
+  border: 1px solid var(--selected-contact);
+  border-left: none;
+  border-right: none;
+}
+
+#contacts .avatar:first-child{
+  border-top: none;
+}
+
+#contacts .avatar:last-child{
+  border-bottom: none;
 }
 
 #contacts .name{
@@ -211,7 +208,7 @@ img{
   color: var(--medium-gray);
 }
 
-/* main content */
+/* MAIN CONTENT */
 
 #main-content{
   width: 65%;
@@ -227,8 +224,8 @@ img{
 }
 
 .mex-container{
-  width: 80%;
-  margin: 3rem auto;
+  width: 85%;
+  margin: 2rem auto;
   flex-direction: column;
   gap: 0.5rem;
 }
@@ -238,7 +235,7 @@ img{
   font-weight: 500;
   padding: 0.6rem;
   border-radius: 0.7rem;
-  width: 17rem;
+  width: 19rem;
 }
 
 .mex.sent{
