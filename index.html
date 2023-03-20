@@ -70,7 +70,9 @@
                   <div class="access">Ultimo messaggio inviato</div>
                 </div>
                 </div>
-                <div class="time">12:00</div>
+                <div v-for="(mex,indice) in contacts[index].messages" class="time">
+                  <div v-if="indice==contacts[index].messages.length-1">{{mex.date}}</div>
+                </div>
               </div>
 
             <!-- <div class="scroll-bar">
@@ -108,7 +110,7 @@
             <div class="chat-area overflow-y">
               
               <div class="mex-container d-flex">
-                <div v-for="mex in contacts[activeContact].messages" class="mex" :class="mex.status == 'sent'?'sent':'received'">
+                <div v-for="mex in contacts[activeContact].messages" class="mex" :class="mex.status=='sent'?'sent':'received'">
                   <div class="mex-text">{{mex.message}}</div>
                   <div class="time">{{mex.date}}</div>
                 </div>
@@ -138,7 +140,9 @@
 
 
   </div>
-  
+
+  <!-- script luxon -->
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
   <!-- script vue js -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <!-- script js -->
