@@ -62,7 +62,7 @@
            <!-- contacts -->
           <div id="contacts" class="overflow-y">
 
-              <div v-for="contact in contacts" class="avatar d-flex w-100">
+              <div v-for="(contact,index) in contacts" @click="showContact(index)" class="avatar d-flex w-100">
                 <div class="h-100 d-flex">
                   <img :src="contact.avatar" :alt="contact.name">
                 <div class="info">
@@ -108,7 +108,7 @@
             <div class="chat-area">
               
               <div class="mex-container d-flex">
-                <div v-for="mex in contacts[0].messages" class="mex" :class="mex.status == 'sent'?'sent':'received'">
+                <div v-for="mex in contacts[activeContact].messages" class="mex" :class="mex.status == 'sent'?'sent':'received'">
                   <div class="mex-text">{{mex.message}}</div>
                   <div class="time">{{mex.date}}</div>
                 </div>
