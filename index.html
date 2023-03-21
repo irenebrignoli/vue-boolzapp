@@ -94,7 +94,9 @@
               <img :src="contacts[activeContact].avatar" alt="contacts[activeContact].name">
               <div class="info">
                 <span class="name">{{contacts[activeContact].name}}</span>
-                <div class="access">Ultimo accesso oggi alle 12:00</div>
+                <div class="access">Ultimo accesso oggi alle 
+                  <span>{{onlyTimeNoSeconds()}}</span>
+                </div>
               </div>
             </div>
             <div class="icons d-flex">
@@ -117,7 +119,7 @@
                     <div class="info-menu" @click="removeMessage(index)">Delete message</div>
                   </div>
                   <div class="mex-text">{{mex.message}}</div>
-                  <div class="time">{{mex.date}}</div>
+                  <div class="time">{{onlyTime(index)}}</div>
                 </div>
               </div>
               

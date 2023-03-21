@@ -237,7 +237,25 @@ const { createApp } = Vue
       },
       removeMessage(index){
         this.contacts[this.activeContact].messages.splice(index,1);
+      },
+      onlyTime(index){
+        const timeDivided = this.contacts[this.activeContact].messages[index].date.split(' ');
+        return timeDivided[1];
+      },
+      onlyTimeNoSeconds(){
+        this.contacts[this.activeContact].messages.forEach((mex,index) =>{
+          if(index == this.contacts[this.activeContact].messages.length-1){
+            const timeDivided = mex.date.split(' ');
+            const timeNoSeconds = timeDivided[1].split(':');
+            return(`${timeNoSeconds[0]}:${timeNoSeconds[1]}`);
+          }
+          
+        });
+       
       }
+    },
+    mounted(){
+       
     }
   }).mount('#app')
 

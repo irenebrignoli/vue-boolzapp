@@ -260,6 +260,10 @@ img{
   cursor: pointer;
 }
 
+.mex:hover .mex-text{
+  margin-right: 0.5rem;
+}
+
 .mex:hover .mex-menu-icon{
   opacity: 1;
 }
