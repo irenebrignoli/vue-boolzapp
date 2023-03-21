@@ -1,5 +1,5 @@
 const DateTime = luxon.DateTime;
-let timeNow = DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
+
 
 const { createApp } = Vue
 
@@ -169,10 +169,14 @@ const { createApp } = Vue
             ]
           }
         ],
+        user: {
+          name: 'Irene',
+          avatar: './img/avatar_io.jpg',
+        },
         activeContact: 0,
         newMex: '',
         newSearch: '',
-        timeNow: timeNow
+        show: false,
       }
     },
     methods: {
@@ -181,7 +185,7 @@ const { createApp } = Vue
       },
       sendMessage(){
         const newMessage = {
-          date: this.timeNow,
+          date: DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS),
           message: this.newMex,
           status: 'sent'
         }
@@ -191,7 +195,7 @@ const { createApp } = Vue
       },
       receiveMessage(){
         const newMexReceived = {
-          date: this.timeNow,
+          date: DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS),
           message: 'ok',
           status: 'received'
         }
@@ -211,6 +215,7 @@ const { createApp } = Vue
       resetSearch(){
         this.newSearch = '';
       }
+    
    
     }
   }).mount('#app')
@@ -220,3 +225,5 @@ const { createApp } = Vue
 
  console.log(DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS));
 
+
+ 

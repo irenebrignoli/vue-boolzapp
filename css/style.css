@@ -240,6 +240,41 @@ img{
   padding: 0.6rem;
   border-radius: 0.7rem;
   width: 19rem;
+  position: relative;
+}
+
+.mex-menu-icon{
+  position: absolute;
+  right: 0.6rem;
+  top:0.5rem;
+  color: var(--medium-gray);
+  opacity: 0;
+  cursor: pointer;
+}
+
+.mex:hover .mex-menu-icon{
+  opacity: 1;
+}
+
+.mex-menu{
+  width: 8rem;
+  z-index: 999;
+  background-color: var(--white);
+  position: absolute;
+  right: 0.6rem;
+  top: 2rem;
+  padding: 0.8rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 3px;
+  color: var(--dark-gray);
+}
+
+.mex-menu .info-menu{
+  cursor: pointer;
+}
+
+.mex-menu .info-menu:first-child{
+  margin-bottom: 0.5rem;
 }
 
 .mex.sent{

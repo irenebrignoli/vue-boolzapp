@@ -28,8 +28,8 @@
           <!-- aside header-->
           <header class="section-header">
             <div class="avatar">
-              <img src="img/avatar_io.jpg" alt="my image">
-              <span class="info">Irene</span>
+              <img :src="user.avatar" :alt="user.name">
+              <span class="info">{{user.name}}</span>
             </div>
             <div class="icons d-flex">
               <i class="fa-solid fa-circle-notch"></i>
@@ -111,6 +111,11 @@
               
               <div class="mex-container d-flex">
                 <div v-for="mex in contacts[activeContact].messages" class="mex" :class="mex.status=='sent'?'sent':'received'">
+                  <div @click="show=!show" class="mex-menu-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                  <div v-show="show" class="mex-menu">
+                    <div class="info-menu">Message info</div>
+                    <div class="info-menu">Delete message</div>
+                  </div>
                   <div class="mex-text">{{mex.message}}</div>
                   <div class="time">{{mex.date}}</div>
                 </div>
