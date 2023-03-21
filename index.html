@@ -63,16 +63,21 @@
           <div id="contacts" class="overflow-y">
 
               <div v-for="(contact,index) in contacts" @click="showContact(index)" class="avatar d-flex w-100" :class="(contacts[index].visible==false?'d-none':''), (activeContact==index?'selected':'')">
-                <div class="h-100 d-flex">
+
+                <div class="h-100 d-flex left-part">
                   <img :src="contact.avatar" :alt="contact.name">
                 <div class="info">
                   <span class="name">{{contact.name}}</span>
-                  <div class="access">Ultimo messaggio inviato</div>
+                  <div v-for="(mex,indice) in contacts[index].messages" class="access">
+                    <div v-if="indice==contacts[index].messages.length-1" >{{mex.message}}</div>
+                  </div>
                 </div>
                 </div>
-                <div v-for="(mex,indice) in contacts[index].messages" class="time">
+
+                <div v-for="(mex,indice) in contacts[index].messages" class="time right-part">
                   <div v-if="indice==contacts[index].messages.length-1">{{mex.date}}</div>
                 </div>
+
               </div>
 
             <!-- <div class="scroll-bar">

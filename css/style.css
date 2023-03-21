@@ -194,7 +194,6 @@ img{
 #contacts .avatar{
   height: 5rem;
   padding: 0.8rem;
-  justify-content: space-between;
   border: 1px solid var(--selected-contact);
   border-left: none;
   border-right: none;
@@ -219,6 +218,11 @@ img{
 #contacts .access{
   color: var(--medium-gray);
 }
+
+#contacts .left-part{
+  width: 100%;
+}
+
 
 /* MAIN CONTENT */
 
