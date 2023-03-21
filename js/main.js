@@ -122,7 +122,7 @@ const { createApp } = Vue
           },
           {
             name: 'Claudia',
-            avatar: './img/avatar_5.jpg',
+            avatar: './img/avatar_6.jpg',
             visible: true,
             messages: [
               {
@@ -235,7 +235,9 @@ const { createApp } = Vue
       resetSearch(){
         this.newSearch = '';
       },
-   
+      removeMessage(index){
+        this.contacts[this.activeContact].messages.splice(index,1);
+      }
     }
   }).mount('#app')
 

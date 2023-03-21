@@ -47,6 +47,14 @@ body{
   width: 100%;
 }
 
+.d-none{
+  display: none;
+}
+
+.selected{
+  background-color: var(--selected-contact);
+}
+
 .overflow-y{
   overflow-y: auto;
 }
@@ -179,10 +187,6 @@ img{
   width: 100%;
 }
 
-.d-none{
-  display: none;
-}
-
 #contacts{
   height: calc(100% - 12rem);
 }
@@ -194,6 +198,10 @@ img{
   border: 1px solid var(--selected-contact);
   border-left: none;
   border-right: none;
+}
+
+#contacts .avatar:hover{
+  background-color: var(--selected-contact);
 }
 
 #contacts .avatar:first-child{
@@ -262,8 +270,8 @@ img{
   background-color: rgba(255, 255, 255, 0.8);
   position: absolute;
   right: 0.6rem;
+  padding: 0.3rem;
   top: 2rem;
-  padding: 0.8rem;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   border-radius: 3px;
   color: var(--dark-gray);
@@ -271,6 +279,11 @@ img{
 
 .mex-menu .info-menu{
   cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mex-menu .info-menu:hover{
+  background-color: var(--selected-contact);
 }
 
 .mex-menu .info-menu:first-child{
