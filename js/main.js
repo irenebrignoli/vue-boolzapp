@@ -196,7 +196,7 @@ const { createApp } = Vue
         },
         activeContact: 0,
         newMex: '',
-        newSearch: ''
+        newSearch: '',
       }
     },
     methods: {
@@ -230,7 +230,7 @@ const { createApp } = Vue
             element.visible = false;
             }
         });
-        setTimeout(this.resetSearch,4000);
+        //setTimeout(this.resetSearch,4000);
       },
       resetSearch(){
         this.newSearch = '';
@@ -242,16 +242,10 @@ const { createApp } = Vue
         const timeDivided = this.contacts[this.activeContact].messages[index].date.split(' ');
         return timeDivided[1];
       },
-      onlyTimeNoSeconds(){
-        this.contacts[this.activeContact].messages.forEach((mex,index) =>{
-          if(index == this.contacts[this.activeContact].messages.length-1){
-            const timeDivided = mex.date.split(' ');
-            const timeNoSeconds = timeDivided[1].split(':');
-            return(`${timeNoSeconds[0]}:${timeNoSeconds[1]}`);
-          }
-          
-        });
-       
+      lastAccess(activeContact, index){
+        const timeDivided = this.contacts[activeContact].messages[index].date.split(' ');
+        const timeNoSeconds = timeDivided[1].split(':');
+        return `${timeNoSeconds[0]}:${timeNoSeconds[1]}`;
       }
     },
     mounted(){

@@ -94,8 +94,10 @@
               <img :src="contacts[activeContact].avatar" alt="contacts[activeContact].name">
               <div class="info">
                 <span class="name">{{contacts[activeContact].name}}</span>
-                <div class="access">Ultimo accesso oggi alle 
-                  <span>{{onlyTimeNoSeconds()}}</span>
+                <div v-for="(mex,index) in contacts[activeContact].messages">
+                  <div v-if="index==contacts[activeContact].messages.length-1" class="access">Ultimo accesso:
+                    <span>{{lastAccess(activeContact,index)}}</span>
+                  </div>
                 </div>
               </div>
             </div>
