@@ -15,17 +15,20 @@ const { createApp } = Vue
               {
               date: '10/01/2020 15:30:55',
               message: 'Hai portato a spasso il cane?',
-              status: 'sent'
+              status: 'sent',
+              showMenu: false
               },
               {
               date: '10/01/2020 15:50:00',
               message: 'Ricordati di stendere i panni',
-              status: 'sent'
+              status: 'sent',
+              showMenu: false
               },
               {
               date: '10/01/2020 16:15:22',
               message: 'Tutto fatto!',
-              status: 'received'
+              status: 'received',
+              showMenu: false
               }
             ]
           },
@@ -214,8 +217,13 @@ const { createApp } = Vue
       },
       resetSearch(){
         this.newSearch = '';
+      },
+      showMexMenu(activeContact){
+        this.contacts[activeContact].messages.forEach((mex, index) =>{
+          mex.showMenu=!mex.showMenu;
+        });
+        //this.show=!this.show;
       }
-    
    
     }
   }).mount('#app')
