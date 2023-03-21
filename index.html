@@ -111,7 +111,7 @@
               
               <div class="mex-container d-flex">
                 <div v-for="(mex,index) in contacts[activeContact].messages" class="mex" :class="mex.status=='sent'?'sent':'received'">
-                  <div @click="showMexMenu(activeContact)" class="mex-menu-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                  <div @click="mex.showMenu=!mex.showMenu" class="mex-menu-icon"><i class="fa-solid fa-chevron-down"></i></div>
                   <div v-show="mex.showMenu" class="mex-menu">
                     <div class="info-menu">Message info</div>
                     <div class="info-menu">Delete message</div>
